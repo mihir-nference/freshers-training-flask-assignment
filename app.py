@@ -5,7 +5,7 @@ from bson import ObjectId
 from pymongo import MongoClient
 from flask import Flask,jsonify,request
 
-client = MongoClient('mongodb://mihir.n:b2o3czbfb1sdqul@mongo.servers.nferx.com:27017')
+client = MongoClient('mongodb://<username>:<pass>@mongo.servers.nferx.com:27017')
 #client = MongoClient('localhost:27017')
 db = client['Mihir_Narayan']
 storedDatasets = db['datasets']

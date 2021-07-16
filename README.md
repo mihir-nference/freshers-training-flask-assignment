@@ -34,20 +34,22 @@ Clone this repo in your local and make a new branch with your name, update the r
 ###### You can always reach out to Sairam Bade or Kuldeep on slack in case of any doubt. Good Luck!
 ---------------------------------------------
 
-### Requirements and Procedure
+## Requirements and Procedure
 Make sure mongodb service is running and you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed on your system.
 
 Add your Mongodb credentials in creds.py and save.
 
-Now create your virtual environment with pip in it.\
-`conda create --name <env_name> pip` \
-`conda activate <env_name>`
+Now create your virtual environment with pip in it.
 
-Now inside project directory, install the packages and run app in your environment\
-`pip install -r requirements.txt`\
-`export FLASK_APP=app.py`\
-`export FLASK_ENV=development`\
-`flask run`
+    conda create --name <env_name> pip
+    conda activate <env_name>
+
+Now inside project directory, install the packages and run app in your environment
+
+    pip install -r requirements.txt
+    export FLASK_APP=app.py
+    export FLASK_ENV=development
+    flask run
 
 It will state the address where your flask app is running
 Now just run postman for flask app route and try all the APIs

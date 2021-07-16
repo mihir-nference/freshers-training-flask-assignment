@@ -52,7 +52,8 @@ Now inside project directory, install the packages and run app in your environme
     flask run
 
 It will state the address where your flask app is running
-Now just run postman for flask app route and try all the APIs
+
+Now just run postman for flask app route and try all the APIs.\
 This app has 3 APIs:
 
 1. "/load_project":\

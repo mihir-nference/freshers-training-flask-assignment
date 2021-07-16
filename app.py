@@ -4,8 +4,9 @@ import json
 from bson import ObjectId
 from pymongo import MongoClient
 from flask import Flask,jsonify,request
+from creds import *
 
-client = MongoClient('mongodb://<username>:<pass>@mongo.servers.nferx.com:27017')
+client = MongoClient(f"mongodb://{username}:{password}@mongo.servers.nferx.com:27017")
 #client = MongoClient('localhost:27017')
 db = client['Mihir_Narayan']
 storedDatasets = db['datasets']
@@ -83,7 +84,7 @@ def fetchInfo():
 	res['_id']=str(res['_id'])
 	return res
 
-@app.route('/trained_models',methods=['GET'])
+@app.route('/fetch_trained_models',methods=['GET'])
 def fetchTrainedModels():
 	dataset_id = ObjectId(request.args.get('dataset_id'))
 	model_ids = trainedModels.find_one({'_id':dataset_id})['trained_models']

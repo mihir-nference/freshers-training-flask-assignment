@@ -43,11 +43,11 @@ Now create your virtual environment with pip in it.\
 `conda create --name <env_name> pip` \
 `conda activate <env_name>`
 
-Now inside project directory, install the packages and run app in your environment
+Now inside project directory, install the packages and run app in your environment\
 `pip install -r requirements.txt`\
 `export FLASK_APP=app.py`\
 `export FLASK_ENV=development`\
-`flask run`\
+`flask run`
 
 It will state the address where your flask app is running
 Now just run postman for flask app route and try all the APIs

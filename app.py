@@ -30,7 +30,7 @@ def changeidtodata(lst,storedData):
 def index():
 	return "Welcome to Flask app"
 
-@app.route('/load_project',methods=['GET'])
+@app.route('/load_project',methods=['POST'])
 def loadProject():
 	project_id = ObjectId(request.args.get('project_id'))
 	

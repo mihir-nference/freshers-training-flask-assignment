@@ -53,12 +53,13 @@ Now inside project directory, install the packages and run app in your environme
 
 It will state the address where your flask app is running
 Now just run postman for flask app route and try all the APIs
-This app has 3 APIs which takes `GET` requests with explained keys value pairs:
+This app has 3 APIs:
+
 1. "/load_project":\
-  Give `project_id` to load that project to nferex mongodb server.
+  Give `project_id` (as `POST` request) to load that project to nferex mongodb server.
 
 2. "/fetch_info":\
-  Give either `project_id` or `dataset_id` or `model_id` and relevant informantion will be fetched from the mongodb collections
+  Give either `project_id` or `dataset_id` or `model_id` (as `GET` request) and relevant informantion will be fetched from the mongodb collections
 
 3. "/fetch_trained_models":\
-  Give `dataset_id` and all the models trained using that dataset will be fetched
+  Give `dataset_id` (as `GET` request) and all the models trained using that dataset will be fetched

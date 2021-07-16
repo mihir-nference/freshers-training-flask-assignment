@@ -39,7 +39,7 @@ Make sure mongodb service is running and you have [conda](https://docs.conda.io/
 
 Add your Mongodb credentials in creds.py and save.
 
-Now create your virtual environment with pip in it.
+Now create your virtual environment with pip in it.\
 `conda create --name <env_name> pip` \
 `conda activate <env_name>`
 
@@ -47,16 +47,16 @@ Now inside project directory, install the packages and run app in your environme
 `pip install -r requirements.txt`\
 `export FLASK_APP=app.py`\
 `export FLASK_ENV=development`\
-`flask run`
+`flask run`\
 
 It will state the address where your flask app is running
 Now just run postman for flask app route and try all the APIs
 This app has 3 APIs which takes `GET` requests with explained keys value pairs:
-1. "./load_project":\
+1. "/load_project":\
   Give `project_id` to load that project to nferex mongodb server.
 
-2. "./fetch_info":\
+2. "/fetch_info":\
   Give either `project_id` or `dataset_id` or `model_id` and relevant informantion will be fetched from the mongodb collections
 
-3. "./fetch_trained_models":\
+3. "/fetch_trained_models":\
   Give `dataset_id` and all the models trained using that dataset will be fetched
